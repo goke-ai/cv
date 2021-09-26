@@ -349,5 +349,10 @@ MigrationBackup/
 # Ionide (cross platform F# VS Code tools) working folder
 .ionide/
 
-
+essential/*.bmp
 essential/*.jpg
+essential/*.png
+essential/*.tiff
+essential/*.avi
+essential/*.mpeg
+essential/*.mp4
