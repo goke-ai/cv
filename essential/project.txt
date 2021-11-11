@@ -1,0 +1,36 @@
+# Project 
+
+1. Develop an app that can :
+- Detect any shape in an image
+- Count the total number of objects
+- Sort the objects by size
+- Sort the objects by shape
+- Sort the objects by size then shape
+- Sort the objects by shape then size
+- Create another image of collection of similar shapes at original position
+seed=1
+
+	-mahmudah
+	-afik
+	-saseendran
+	
+2. Develop an app that can easily tell a combination of handwritten number images.
+- The number combination will randomly be selected from the test or data used for the train and testing the knn
+	-azureen
+	-inamul
+	-numan
+seed=2
+
+
+3. Develop an app that can recognize faces in an image in a video.
+- Video file or live recording
+	-mahmudah
+	-azureen
+	-afik
+	-inamul
+	-numan
+	-saseendran
+seed=3
+
+Note:
+Apps in jupyter first, then convert to .py
