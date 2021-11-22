@@ -2,7 +2,7 @@
 import cv2 as cv
 import matplotlib.pyplot as plt
 from color_component import get_channel, remove_channel
-import image_scale as ims
+from gokPrj.image_processing.image_scale import enlarge
 
 img = cv.imread('color_img.png')
 
@@ -29,7 +29,7 @@ plt.title(f"Channel {ch} removed")
 plt.tight_layout()
 plt.show()
 
-img3ple = ims.enlarge(img, 3,3)
+img3ple = enlarge(img, 3,3)
 imgRGB = img3ple[:, :, ::-1]
 plt.imshow(imgRGB)
 plt.title(f"Triple")
