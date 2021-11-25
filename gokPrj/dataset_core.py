@@ -4,11 +4,12 @@ import matplotlib.pyplot as plt
 import numpy as np
 
 
-def create_dataset(datasetfilename):
+def create_dataset(datasetfilename, classNames):
 
     # list of images
     imgList = []
     labelList = []
+    labelNameList = []
 
     # read image files from folder
     srcPath = "rawdata"
@@ -16,18 +17,21 @@ def create_dataset(datasetfilename):
         filePath = os.path.join(srcPath, fname)
         # read
         img = cv.imread(filePath)
+        imgRGB = img[:,:,::-1]
 
         # get last character
         fname_no_ext = os.path.splitext(fname)[0]
         label = fname_no_ext[-1]
 
         # append image
-        imgList.append(img)
-        labelList.append(label)
+        imgList.append(imgRGB)
+        labelList.append(classNames[label])
+        labelNameList.append(label)
 
     images = np.array(imgList, dtype='object')
-    labels = np.array(labelList, dtype='object')
-    np.savez_compressed(datasetfilename, images=images, labels=labels)
+    labels = np.array(labelList)
+    labelnames = np.array(labelNameList)
+    np.savez_compressed(datasetfilename, images=images, labels=labels, labelnames=labelnames)
 
     return True
 
@@ -36,21 +40,29 @@ if __name__ == "__main__":
     # save dataset
     datasetfilename = 'gokedataset.npz'
 
-    if create_dataset(datasetfilename):
+    # classNames = {'afiq':0, 'azureen':1, 'gavin':2, 'goke':3,  'inamul':4, 'jincheng':5, 'mahmuda':6, 'numan':7, 'saseendran':8}
+
+    classNames = {'A':0, 'B':1, 'C':2}
+
+
+    if create_dataset(datasetfilename, classNames):
 
         data = np.load(datasetfilename, allow_pickle=True)
 
         imgList = data['images']
         labelList = data['labels']
+        labelNameList = data['labelnames']
 
         # display first and 2nd image
         img = imgList[0]
         label = labelList[0]
+        labelName = labelNameList[0]
         # convert BGR to RGB
-        imgRGB = img[:, :, ::-1]
+        # imgRGB = img[:, :, ::-1]
         # show
-        plt.imshow(imgRGB)
-        plt.title(label)
+        # plt.imshow(imgRGB)
+        plt.imshow(img)
+        plt.title(str(label) + ':' + labelName)
         # show
         plt.show()
 
