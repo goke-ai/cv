@@ -470,3 +470,4 @@ GitHub.sublime-settings
 
 env*
 venv*
+*/tf_model/*
