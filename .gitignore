@@ -471,3 +471,8 @@ GitHub.sublime-settings
 env*
 venv*
 */tf_model/*
+*.zip
+*.npz
+*.png
+*/dataset/*
+*/*dataset/*
