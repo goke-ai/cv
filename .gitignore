@@ -474,5 +474,7 @@ venv*
 *.zip
 *.npz
 *.png
-*/dataset/*
-*/*dataset/*
+**/dataset/*
+**/*dataset/*
+**/FashionMNIST/
+*.pth
