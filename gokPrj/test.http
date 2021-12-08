@@ -1,0 +1,52 @@
+GET http://192.168.0.112:5000/api/cv HTTP/1.1
+
+
+###
+
+GET http://192.168.0.112:5000/api/cv/7 HTTP/1.1
+
+
+###
+
+POST http://192.168.0.112:5000/api/cv HTTP/1.1
+content-type: application/json
+
+{"name": "ismail"}
+
+###
+
+PUT http://192.168.0.112:5000/api/cv/2 HTTP/1.1
+content-type: application/json
+
+{"name": "naja"}
+
+###
+
+DELETE http://192.168.0.112:5000/api/cv/10 HTTP/1.1
+content-type: application/json
+
+###
+
+GET  http://192.168.0.112:5000/api/cv/all/1 HTTP/1.1
+content-type: application/json
+
+{"a": 123, "b": 19.5 }
+
+###
+
+POST  http://192.168.0.112:5000/api/cv/all/1 HTTP/1.1
+content-type: application/json
+
+{"a": 123, "b": 19.5 }
+###
+
+PUT  http://192.168.0.112:5000/api/cv/all/1 HTTP/1.1
+content-type: application/json
+
+{"a": 123, "b": 19.5 }
+###
+
+DELETE  http://192.168.0.112:5000/api/cv/all/1 HTTP/1.1
+content-type: application/json
+
+{"a": 123, "b": 19.5 }
