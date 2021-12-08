@@ -49,6 +49,7 @@ def display():
     # Compress the image and store it in the memory buffer:
     retval, buffer = cv.imencode('.jpeg', imgBGR)
     
+    
     print(len(buffer))
     print(buffer.shape)
     
