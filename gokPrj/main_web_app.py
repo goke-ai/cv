@@ -215,5 +215,32 @@ def face():
     '''
 
 
+
+# ASSIGNMENT
+
+# please change [face] to your project unique name
+
+# use tensorflow for prediction
+@app.route('/face_ft', methods=['GET', 'POST'])
+def face_tf():
+    pass
+
+# use pytorch for prediction
+@app.route('/face_pt', methods=['GET', 'POST'])
+def face_pt():
+    pass
+
+
+# use tensorflow cnn for prediction
+@app.route('/face_ft_cnn', methods=['GET', 'POST'])
+def face_tf_cnn():
+    pass
+
+# use pytorch cnn for prediction
+@app.route('/face_pt_cnn', methods=['GET', 'POST'])
+def face_pt_cnn():
+    pass
+
+
 if __name__ == "__main__":
     app.run(host= "0.0.0.0")
